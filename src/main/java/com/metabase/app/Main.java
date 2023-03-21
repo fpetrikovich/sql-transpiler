@@ -6,6 +6,8 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("\n[RUNNING SQL TRANSPILER]");
+
         Map<Integer, String> fieldMap = new HashMap<Integer, String>() {{
             put(1, "id");
             put(2, "name");
@@ -38,5 +40,7 @@ public class Main {
         System.out.println("\nGenerating SQL query for:");
         System.out.println("(generate-sql :mysql fields {:where [:and [:or [:is-empty null] [:not-empty [\"field\", 3]] [:= [:field 2] \"cam\"]})");
         System.out.println(transpiler.generateSQL(Utils.SQLTranspilerType.MY_SQL));
+
+        System.out.println("\nCheck out the SQLTranspilerTest file for multiple SQL generation examples.");
     }
 }

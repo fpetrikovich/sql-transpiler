@@ -171,6 +171,7 @@ Optimize out the OR queries that have 1 or more always logically true comparison
 
 (generate-sql :sqlserver {1 :id, 2 :name} {:limit 20})
 ;; -> "SELECT TOP 20 * FROM data;"
+```
 
 ## Running the code
 This project uses Maven. Maven is used for dependency management and
@@ -187,4 +188,5 @@ Once compilation is done, run the code with the command:
 ```
 java -cp target/metabase-app-1.0-SNAPSHOT.jar com.metabase.app.Main
 ```
+
 
